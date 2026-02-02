@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runith Maven Repository</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --border-color: #30363d;
+            --code-bg: #050505;
+            --success-color: #4ade80;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--accent);
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        pre[class*="language-"] {
+            background: var(--code-bg) !important;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin: 15px 0 30px 0;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        code {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace !important;
+            font-size: 0.95rem !important;
+        }
+
+        .sdk-version {
+            transition: color 0.3s ease;
+        }
+
+        .url-box {
+            background: var(--card-bg);
+            padding: 10px 20px;
+            border-radius: 6px;
+            border-left: 4px solid var(--accent);
+            display: inline-block;
+            margin: 10px 0;
+            font-family: monospace;
+            color: var(--accent);
+        }
+
+        .notes-card {
+            background: rgba(88, 166, 255, 0.05);
+            border: 1px solid rgba(88, 166, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        .notes-card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Runith Maven Repository</h1>
+    <p>
+        Public artifacts for the <strong>Runith api</strong>,
+    </p>
+    <div class="url-box">
+        https://repo.runith.net/
+    </div>
+</header>
+
+<hr style="border: 0; border-top: 1px solid var(--border-color); margin: 40px 0;">
+
+<section>
+    <h2>Gradle (Kotlin DSL)</h2>
+    <h3>Add the repository</h3>
+    <pre><code class="language-kotlin">repositories {
+    maven {
+        url = uri("https://repo.runith.net/")
+    }
+}</code></pre>
+</section>
+
+<section>
+    <h2>Gradle (Groovy DSL)</h2>
+    <pre><code class="language-groovy">repositories {
+    maven {
+        url "https://repo.runith.net/"
+    }
+}
+</code></pre>
+</section>
+
+<section>
+    <h2>Maven</h2>
+    <h3>Add the repository</h3>
+    <pre><code class="language-xml">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;reactor-maven&lt;/id&gt;
+        &lt;url&gt;https://repo.reactor.codes/&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
+</section>
+
+<section class="notes-card">
+    <h3>Important Notes</h3>
+    <ul>
+        <li>The Runith API is intended to be used as a <strong>compile-time dependency</strong>.</li>
+        <li>No authentication is required to access this repository.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>
+        Runith API — Runith Organization<br>
+        <a href="https://github.com/RunithMC" target="_blank">github.com/RunithMC</a>
+    </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/keep-markup/prism-keep-markup.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-groovy.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup-common.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-xml.min.js"></script>
+</body>
+</html>
